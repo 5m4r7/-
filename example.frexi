@@ -4,8 +4,6 @@ var variables = {
 };
 
 function evaluateExpression(expression) {
-    // 算術式の評価
-    // ここで演算子の優先順位を考慮するなど、より高度な機能を追加できます
     return eval(expression);
 }
 
@@ -20,7 +18,7 @@ function handleVariableDeclaration(tokens) {
         var value = evaluateExpression(tokens.slice(3).join(" "));
         variables[varName] = value;
     } else {
-        variables[varName] = 0.0;  // デフォルト値
+        variables[varName] = 0.0; 
     }
 }
 
